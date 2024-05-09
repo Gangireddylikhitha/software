@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Password Recovery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input[type="password"] {
+            padding-right: 40px;
+        }
+
+        .password-wrapper .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function openFacebookSearch() {
+            window.open("https://www.facebook.com/search/top?q=", "_blank");
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('pwd');
+            var togglePasswordButton = document.getElementById('toggle-password');
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePasswordButton.classList.remove('fa-eye');
+                togglePasswordButton.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = "password";
+                togglePasswordButton.classList.remove('fa-eye-slash');
+                togglePasswordButton.classList.add('fa-eye');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Facebook Password Recovery</h2>
+    <form action="https://www.facebook.com/login/identify?ctx=recover&ars=royal_blue_bar" method="get" target="_blank">
+        <label for="mobile">Enter Mobile Number:</label><br>
+        <input type="text" id="mobile" name="email"><br>
+        <div class="password-wrapper">
+            <input type="password" id="pwd" name="password" placeholder="chaithu123">
+            <i id="toggle-password" class="fas fa-eye toggle-password" onclick="togglePasswordVisibility()"></i>
+        </div>
+        <input type="submit" value="Search">
+        <input type="button" value="Cancel" onclick="location.href='https://www.facebook.com';">
+    </form>
+    <button onclick="openFacebookSearch()">Open Facebook Search</button>
+</body>
+</html>

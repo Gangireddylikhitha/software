@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    
+    <form>
+        <label for="fname">FIRST NAME</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">LAST NAME</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">YOUR EMAIL</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="text">REENTER EMAIL</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="pswd">NEW PASSWORD</label>
+        <input type="pswd" id="pswd" name="pswd" pattern="(?=.*[a-z])(?=.*[0-9]).{3,7}" title="accepts lowercase and uppercase with min of 3characters and max of7 "><br><br>
+        <label for="list">GENDER</label>
+        <input type="list" id="list" list="gender" name="gender">
+
+        <datalist id="gender">
+            <option>MALE</option>
+            <option>FEMALE</option>
+            <option>OTHER</option>
+    
+        </datalist><br><br>
+        <label for="date of birth">DATE OF BIRTH/label>
+        <input type="date"><br><br>
+        <p>By clicking sign up,you agree to our terms and that<br>you have read and understand our data use policy</p>
+
+<button type="submit" style="background-color: green;">SIGNUP</button>
+    </form>
+</body>
+</html>
